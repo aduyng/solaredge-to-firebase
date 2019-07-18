@@ -70,6 +70,7 @@
     "firebase-admin": "^8.2.0",
     "lodash": "^4.17.14",
     "moment": "^2.24.0",
-    "puppeteer": "^1.18.1"
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
   }
 }
