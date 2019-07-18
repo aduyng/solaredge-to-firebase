@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Dewey Nguyen",
+      "authorEmail": "aduyng@gmail.com",
+      "authorUrl": ""
+    }
+  }
+}

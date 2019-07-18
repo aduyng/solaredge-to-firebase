@@ -1,0 +1,75 @@
+{
+  "name": "solaredge-to-firebase",
+  "version": "0.0.1",
+  "description": "A nodejs crawler to extract usage entries from smartmetertexas.com and save to firebase realtime database",
+  "author": {
+    "name": "Dewey Nguyen",
+    "email": "aduyng@gmail.com"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.4",
+    "env-cmd": "^9.0.3",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-config-xo": "^0.26.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.0",
+    "jest": "^24.8.0",
+    "lint-staged": "^9.0.2",
+    "prettier": "^1.18.2"
+  },
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": "error",
+      "no-await-in-loop": 0,
+      "no-unused-vars": [
+        "error",
+        {
+          "varsIgnorePattern": "[iI]gnored"
+        }
+      ]
+    },
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "scripts": {
+    "pretest": "eslint .",
+    "test": "jest",
+    "dev": "node -r dotenv/config src/index",
+    "start": "node -r dotenv/config src/index"
+  },
+  "repository": "https://github.com/aduyng/solaredge-to-firebase.git",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "firebase-admin": "^8.2.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "puppeteer": "^1.18.1"
+  }
+}
